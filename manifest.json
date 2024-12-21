@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "name": "Make IG greate again",
+  "description": "Small pack of features that makes IG users happy.",
+  "icons": {
+    "48": "images/instagram.png",
+    "128": "images/instagram.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["./content/download_music/index.js"],
+      "matches": ["https://www.instagram.com/dema__dev/saved/audio/"]
+    }
+  ],
+  "host_permissions": ["https://www.instagram.com/*"],
+  "permissions": ["webRequest", "tabs", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "./sw/sw.js",
+    "type": "module"
+  }
+}
