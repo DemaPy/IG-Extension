@@ -214,7 +214,7 @@ const app = {
 
     if (audio instanceof BookmarkedAudioOriginal) {
       return (
-        audio.original_sound.ig_artist +
+        audio.original_sound.ig_artist.username +
         " - " +
         audio.original_sound.original_audio_title
       );
